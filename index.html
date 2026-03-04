@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rama Canteen Service - Affordable, delicious, and nutritious meals for everyone. Breakfast, Lunch, Evening Snacks, and Desserts." />
+  <title>Rama Canteen Service | Canteen Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="nav container">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Rama Canteen Service Logo" class="logo" />
+        <span>Rama Canteen Service</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#values">Our Values</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="billing.html">Billing</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero-content container">
+      <h1 class="display">Nutritious. Affordable. Made with Care.</h1>
+      <p class="lead">Serving wholesome South Indian flavors for everyone — with special focus on unemployed youth and working-class heroes, while also offering a few rich treats.</p>
+      <a href="#menu" class="btn btn-primary">Explore Menu</a>
+    </section>
+
+    <div class="hero-overlay"></div>
+  </header>
+
+  <main>
+    <section class="highlights container" aria-label="Highlights">
+      <div class="highlight">
+        <span class="icon">🍲</span>
+        <h3>Fresh & Hygienic</h3>
+        <p>Daily prepared meals with quality ingredients.</p>
+      </div>
+      <div class="highlight">
+        <span class="icon">💸</span>
+        <h3>Minimal Pricing</h3>
+        <p>Budget-friendly options accessible to all.</p>
+      </div>
+      <div class="highlight">
+        <span class="icon">⚡</span>
+        <h3>Quick Service</h3>
+        <p>Optimized for canteen operations and speed.</p>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section container" aria-label="Menu">
+      <h2 class="section-title">Our Menu</h2>
+      <p class="section-subtitle">Images are placeholders — replace with your own photos of the dishes. Prices are set to be minimal and fair.</p>
+
+      <div class="menu-tabs" role="tablist" aria-label="Menu Categories">
+        <button class="tab active" data-tab="breakfast" role="tab" aria-selected="true">Morning Breakfast</button>
+        <button class="tab" data-tab="lunch" role="tab" aria-selected="false">Afternoon Meals</button>
+        <button class="tab" data-tab="evening" role="tab" aria-selected="false">Evening Snacks</button>
+        <button class="tab" data-tab="desserts" role="tab" aria-selected="false">Desserts & Beverages</button>
+      </div>
+
+      <div class="tab-content active" id="breakfast" role="tabpanel">
+        <div class="grid">
+          <!-- Breakfast Items -->
+          <article class="card">
+            <img src="idly.jpg" alt="Idly"/>
+            <div class="card-body">
+              <h3>Idly (2 pcs)</h3>
+              <p class="desc">Soft steamed idlies with sambar & chutney.</p>
+              <div class="price">₹15</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="dosa.jpg" alt="Dosa"/>
+            <div class="card-body">
+              <h3>Dosa</h3>
+              <p class="desc">Crispy dosa with chutneys and sambar.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="puri.jpg" alt="Puri"/>
+            <div class="card-body">
+              <h3>Puri (2 pcs)</h3>
+              <p class="desc">Fluffy puris served with potato masala.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="pongal.webp" alt="Pongal"/>
+            <div class="card-body">
+              <h3>Pongal</h3>
+              <p class="desc">Comforting ven pongal with ghee touch.</p>
+              <div class="price">₹20</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="vada.jpeg" alt="Vada"/>
+            <div class="card-body">
+              <h3>Vada (1 pc)</h3>
+              <p class="desc">Crispy medu vada with chutney.</p>
+              <div class="price">₹12</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="tea 1.jpg" alt="Tea"/>
+            <div class="card-body">
+              <h3>Tea</h3>
+              <p class="desc">Strong and refreshing.</p>
+              <div class="price">₹10</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="coffee.jpeg" alt="Coffee"/>
+            <div class="card-body">
+              <h3>Filter Coffee</h3>
+              <p class="desc">Traditional South Indian filter coffee.</p>
+              <div class="price">₹15</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-content" id="lunch" role="tabpanel">
+        <div class="grid">
+          <!-- Lunch Items -->
+          <article class="card">
+            <img src="meals.jpeg" alt="Meals"/>
+            <div class="card-body">
+              <h3>South Indian Meals</h3>
+              <p class="desc">Rice, sambar, rasam, poriyal, curd & appalam.</p>
+              <div class="price">₹40</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="veg rice.jpeg" alt="Veg Rice"/>
+            <div class="card-body">
+              <h3>Veg Rice (Lemon/Jeera)</h3>
+              <p class="desc">Aromatic tempered rice, simple & tasty.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="veg biriyani.jpeg" alt="Biryani"/>
+            <div class="card-body">
+              <h3>Vegetable Biryani</h3>
+              <p class="desc">Fragrant biryani with raita.</p>
+              <div class="price">₹50</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="sambar rice.jpeg" alt="Sambar Rice"/>
+            <div class="card-body">
+              <h3>Sambar Rice</h3>
+              <p class="desc">Comfort bowl of rice mixed with sambar.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="tomato rice.jpeg" alt="Tomato Rice"/>
+            <div class="card-body">
+              <h3>Tomato Rice</h3>
+              <p class="desc">Tangy tomato flavored rice.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="curd rice.jpeg" alt="Curd Rice"/>
+            <div class="card-body">
+              <h3>Curd Rice</h3>
+              <p class="desc">Cooling curd rice with tempering.</p>
+              <div class="price">₹20</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-content" id="evening" role="tabpanel">
+        <div class="grid">
+          <!-- Evening Snacks -->
+          <article class="card">
+            <img src="egg puff.jpeg" alt="Egg Puffs"/>
+            <div class="card-body">
+              <h3>Egg Puffs</h3>
+              <p class="desc">Flaky puff pastry with spiced egg filling.</p>
+              <div class="price">₹20</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="veg puff.jpeg" alt="Veg Puffs"/>
+            <div class="card-body">
+              <h3>Veg Puffs</h3>
+              <p class="desc">Crispy vegetable stuffed puffs.</p>
+              <div class="price">₹18</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="bajji.jpeg" alt="Bajji / Pakodi"/>
+            <div class="card-body">
+              <h3>Bajji / Pakora</h3>
+              <p class="desc">Hot fritters with chutney.</p>
+              <div class="price">₹15</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="kalan.jpeg" alt="Kalan"/>
+            <div class="card-body">
+              <h3>Kalan (Mushroom)</h3>
+              <p class="desc">Street-style mushroom fry.</p>
+              <div class="price">₹30</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-content" id="desserts" role="tabpanel">
+        <div class="grid">
+          <!-- Desserts & Beverages -->
+          <article class="card">
+            <img src="gulab jamun.jpeg" alt="Gulab Jamun"/>
+            <div class="card-body">
+              <h3>Gulab Jamun (2 pcs)</h3>
+              <p class="desc">Soft milk-solid dumplings in sugar syrup.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="ice cream.jpeg" alt="Ice Cream"/>
+            <div class="card-body">
+              <h3>Ice Cream Scoop</h3>
+              <p class="desc">Vanilla/Chocolate/Strawberry.</p>
+              <div class="price">₹30</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="lassi.jpeg" alt="Lassi"/>
+            <div class="card-body">
+              <h3>Sweet Lassi</h3>
+              <p class="desc">Chilled and refreshing.</p>
+              <div class="price">₹20</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="badam milk.jpeg" alt="Badam Milk"/>
+            <div class="card-body">
+              <h3>Badam Milk</h3>
+              <p class="desc">Rich almond-flavored milk.</p>
+              <div class="price">₹25</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="values" class="values-section">
+      <div class="container values-grid">
+        <div>
+          <h2 class="section-title">Our Purpose</h2>
+          <p class="lead">We are committed to nourishing our community with honest food at humble prices. A portion of our operations is dedicated to serving unemployed youth with dignity and respect.</p>
+          <ul class="ticks">
+            <li>Minimal pricing for staple items</li>
+            <li>Special combos for students and job-seekers</li>
+            <li>Free drinking water and clean seating space</li>
+          </ul>
+        </div>
+        <div class="values-card">
+          <h3>Daily Special Combos</h3>
+          <ul>
+            <li>Idly (2) + Vada + Coffee — ₹35</li>
+            <li>Meals + Curd Rice Refill — ₹45</li>
+            <li>Veg Puffs + Tea — ₹25</li>
+          </ul>
+          <p class="muted">Ask at counter for today's availability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Contact & Timings</h2>
+          <p class="lead">Open all days: 6:00 AM – 6:30 PM</p>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> +91-99999-00022</li>
+            <li><strong>Email:</strong> ramacanteen@example.com</li>
+            <li><strong>Address:</strong> Near Bus Stand, Your City, India</li>
+          </ul>
+          <p class="muted">For bulk orders and events, contact at least 24 hours in advance.</p>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); showToast('Thanks! We will get back to you soon.'); this.reset();">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" pattern="[0-9]{10}" placeholder="10-digit number" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Enquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="brand foot-brand">
+        <img src="assets/logo.svg" alt="Rama Canteen Service Logo" class="logo" />
+        <span>Rama Canteen Service</span>
+      </div>
+      <p class="muted">© <span id="year"></span> Rama Canteen Service. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook">👍</a>
+        <a href="#" aria-label="Maps">🗺️</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

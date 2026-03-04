@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rama Canteen | Billing System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .bill-wrap { padding: 2rem 0; }
+    .panel { background: rgba(21,23,27,.75); border:1px solid rgba(255,255,255,.08); border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.35); padding: 1rem; }
+    .grid-2 { display:grid; grid-template-columns: 1.1fr .9fr; gap: 1rem; }
+    .flex { display:flex; gap:.6rem; align-items:end; flex-wrap: wrap; }
+    .field-sm { display:grid; gap:.3rem; }
+    .field-sm input, .field-sm select { background:#0f1216; border:1px solid rgba(255,255,255,.08); color:#e6e9ef; padding:.55rem .7rem; border-radius:10px; min-width: 120px; }
+    .btn-sm { padding: .6rem .8rem; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-700)); color:#fff; font-weight:600; border:0; cursor:pointer; }
+    .table { width:100%; border-collapse: collapse; }
+    .table th, .table td { padding:.6rem; border-bottom:1px solid rgba(255,255,255,.06); text-align:left; }
+    .table tfoot td { font-weight:700; }
+    .right { text-align:right; }
+    .muted { color: var(--muted); }
+    .section-title { margin: 0 0 .6rem; }
+    .pill { display:inline-block; padding:.2rem .5rem; background:#20242a; border:1px solid rgba(255,255,255,.08); border-radius:999px; font-size:.8rem; color:#e6e9ef; }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="nav container">
+    <div class="brand">
+      <img src="assets/logo.svg" class="logo" alt="Logo"/>
+      <span>Rama Canteen Service</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="billing.html">Billing</a></li>
+    </ul>
+  </nav>
+
+  <main class="container bill-wrap">
+    <h1 class="section-title">Canteen Billing</h1>
+    <p class="muted">Add items to cart, generate invoice, and automatically log the sale to monthly summary stored in this browser.</p>
+
+    <div class="grid-2">
+      <!-- Left: Create Bill -->
+      <section class="panel">
+        <h3>Create Bill <span class="pill" id="bill-date-pill"></span></h3>
+        <div class="flex" style="margin:.6rem 0 1rem;">
+          <div class="field-sm">
+            <label for="item">Item</label>
+            <input id="item" list="menu-list" placeholder="e.g. Idly (2)" />
+            <datalist id="menu-list"></datalist>
+          </div>
+          <div class="field-sm">
+            <label for="price">Price (₹)</label>
+            <input id="price" type="number" min="0" step="0.5" placeholder="15" />
+          </div>
+          <div class="field-sm">
+            <label for="qty">Qty</label>
+            <input id="qty" type="number" min="1" step="1" value="1" />
+          </div>
+          <button class="btn-sm" id="add-item">Add Item</button>
+          <button class="btn-sm" id="clear-cart" style="background:#30343a;">Clear</button>
+        </div>
+
+        <div style="overflow:auto;">
+          <table class="table" id="cart-table" aria-label="Current Bill Items">
+            <thead>
+              <tr><th>#</th><th>Item</th><th class="right">Qty</th><th class="right">Rate</th><th class="right">Amount</th><th></th></tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr><td colspan="4" class="right">Subtotal</td><td class="right" id="subtotal">₹0.00</td><td></td></tr>
+              <tr><td colspan="4" class="right">Tax (0%)</td><td class="right" id="tax">₹0.00</td><td></td></tr>
+              <tr><td colspan="4" class="right">Total</td><td class="right" id="total">₹0.00</td><td></td></tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="flex" style="justify-content: flex-end; margin-top: .8rem;">
+          <button class="btn-sm" id="print-bill" title="Print/Save PDF">Print / Save PDF</button>
+          <button class="btn-sm" id="complete-sale">Complete Sale</button>
+        </div>
+      </section>
+
+      <!-- Right: Monthly Summary -->
+      <section class="panel">
+        <h3>Monthly Summary</h3>
+        <div class="flex" style="margin:.5rem 0 1rem;">
+          <div class="field-sm">
+            <label for="month">Month</label>
+            <input id="month" type="month" />
+          </div>
+          <button class="btn-sm" id="refresh-summary">Show</button>
+          <button class="btn-sm" id="export-summary" title="Download CSV" style="background:#30343a;">Export CSV</button>
+        </div>
+        <div style="overflow:auto;">
+          <table class="table" id="summary-table" aria-label="Monthly Summary Table">
+            <thead>
+              <tr><th>Date</th><th>Bills</th><th class="right">Qty</th><th class="right">Revenue (₹)</th></tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr><td colspan="2"><strong>Total</strong></td><td class="right" id="sum-qty">0</td><td class="right" id="sum-revenue">₹0.00</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="billing.js"></script>
+</body>
+</html>
